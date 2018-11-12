@@ -41,7 +41,7 @@ const validTickers = [
 
 
 
-// checking against whitelist but might use stricter logic like checking against exchange APIs
+// ut
 const isValidTicker = (ticker = "") =>
   validTickers.indexOf(ticker) !== -1 ? true : false;
 
@@ -179,7 +179,8 @@ const trackTickers = (tickers = []) => {
 
 const [node, fs, tradingPair, ...exchanges] = process.argv;
 
-if(tradingPair) {
+
+if(tradingPair && exchanges.length) {
   const [_, ticker1 = "", ticker2 = ""] = tradingPair.match(/^(\w{3,4})\/?(\w{3,4})/);
   const tickers = [ticker1.toUpperCase(), ticker2.toUpperCase()];
   const tickerTracker = trackTickers(tickers);
