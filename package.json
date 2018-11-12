@@ -1,0 +1,24 @@
+{
+  "name": "kiba",
+  "version": "1.0.0",
+  "description": "CLI for Binance Exchange data",
+  "scripts": {
+    "test": "test"
+  },
+  "preferGlobal": true,
+  "keywords": [
+    "airswap",
+    "cryptocurrency",
+    "nodejs",
+    "cli"
+  ],
+  "author": "Kiba Gateaux",
+  "license": "ISC",
+  "bin": {
+    "kiba": "./index.js"
+  },
+  "dependencies": {
+    "bitfinex-api-node": "^2.0.1",
+    "node-binance-api": "^0.8.6"
+  }
+}
